@@ -1,3 +1,4 @@
+*.mp4 filter=lfs diff=lfs merge=lfs -text
 *.ftpquota filter=lfs diff=lfs merge=lfs -text
 *.htaccess filter=lfs diff=lfs merge=lfs -text
 *.html filter=lfs diff=lfs merge=lfs -text
@@ -15,6 +16,5 @@
 *.png filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
 *.PNG filter=lfs diff=lfs merge=lfs -text
-*.mp4 filter=lfs diff=lfs merge=lfs -text
 *.gif filter=lfs diff=lfs merge=lfs -text
 *.php filter=lfs diff=lfs merge=lfs -text
