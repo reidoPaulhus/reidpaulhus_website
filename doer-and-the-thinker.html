@@ -202,6 +202,12 @@
     <script type="text/javascript" src="js/bskit-scripts.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
     <script type="text/javascript" src="js/grid-gallery.js"></script>
+    <script type="text/javascript">
+        // Force Firefox to recalculate grid layout dimensions after full page assets load
+        window.addEventListener('load', function() {
+            window.dispatchEvent(new Event('resize'));
+        });
+    </script>
 
 </body>
 
