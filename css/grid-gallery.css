@@ -4,29 +4,32 @@
 }
 
 .gg-box {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 150px;
   gap: 6px;
   width: 100%;
-  /* Fallback to ensure parent never evaluates as 0 height */
-  min-height: 150px;
 }
 
-.gg-box img {
-  /* flex-grow: 1, flex-shrink: 0, flex-basis: 130px */
-  /* flex-shrink: 0 physically prevents Firefox from shrinking the image to 0 */
-  flex: 1 0 130px;
-  height: 150px;
+/* The wrapper establishes the physical space safely */
+.img-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 
-  /* Overrides Bootstrap's global max-width constraint */
-  max-width: none;
-
+/* The image just fills the safe space */
+.img-wrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.9);
+  transition: opacity 0.2s ease;
 }
 
-.gg-box img:hover {
+.img-wrapper img:hover {
   opacity: 0.50;
 }
 
