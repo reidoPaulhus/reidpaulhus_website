@@ -1,3 +1,352 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d3def395a535a9528e66f1e1554ce62e482bbf74f3df3bf76115c8dca2fd0dd9
-size 8057
+/* Assignment 3 by Reid Paulhus */
+
+/* Fonts */
+@font-face {
+	font-family: 'PathwayExtreme';
+    src: url('../fonts/ttf/PathwayExtreme.ttf') format('truetype');
+    font-variation-settings: 'wght' 4 300, 'wdth' 0 100, 'opsz' 8 144, 'slnt' 0 8;
+}
+
+@font-face {
+	font-family: 'PathwayExtreme2';
+    src: url('../fonts/ttf/PathwayExtreme.ttf') format('truetype');
+    font-variation-settings: 'wght' 4 300, 'wdth' 0 100, 'opsz' 8 144, 'slnt' 0 8;
+}
+
+/* Sets the margins and box model */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    /* Row 1 properties*/
+    --font-weight-line1: 85;
+    --font-weight-line2: 85;
+    /* Row 2 properties*/
+    --font-width-row2: 50;
+    /* Row 3 properties*/
+    --font-weight-row3: 85;
+    --font-optical: 12;
+    /* Row 5 properties*/
+    --font-weight-row5: 85;
+    --font-width-row5: 85;
+}
+
+header {
+    background-color: #191919;
+    color: #F1E8B8;
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'wght' 10, 'wdth' 10;
+    text-align: center;
+    font-size: 1em;
+    padding: 20px;
+}
+
+footer {
+    background-color: #191919;
+    color: #F1E8B8;
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'wght' 10, 'wdth' 10;
+    text-align: center;
+    font-size: 1em;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 15vw;
+    text-size-adjust: 200%;
+}
+
+/* CSS Grid Elements */
+.grid {
+    display: grid;
+    width: 100%;
+}
+
+.row {
+    display: inline-grid;
+    width: 100%;
+    height: 100vh;
+    vertical-align: middle;
+    align-content: center;
+    text-align: center;
+}
+
+/* Row 1 Contents */
+.row.one {
+    background-color: #F1E8B8;
+    color: #D05353;
+    
+}
+
+.line.one {
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'wght' var(--font-weight-line1);
+}
+
+.line.two {
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'wght' var(--font-weight-line2);
+}
+
+/* Row 2 Contents */
+.row.two {
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'wght' 4, 'wdth' var(--font-width-row1);
+    align-content: center;
+    background-color: #D05353;
+    color: #191919;
+}
+
+.word {
+    font-size: 8vw;
+    height: 3vh;
+}
+
+.word.one {
+    --delay: calc((var(--char-index) + 1) * 400ms);
+    animation: breathe 4000ms infinite both;
+    animation-delay: var(--delay);
+}
+
+.word.two {
+    --delay: calc((var(--char-index) + 1) * 400ms);
+    animation: breathe 4000ms infinite both;
+    animation-delay: var(--delay);
+}
+
+.word.three {
+    --delay: calc((var(--char-index) + 1) * 400ms);
+    animation: breathe 4000ms infinite both;
+    animation-delay: var(--delay);
+}
+
+.word.four {
+    --delay: calc((var(--char-index) + 1) * 400ms);
+    animation: breathe 4000ms infinite both;
+    animation-delay: var(--delay);
+}
+
+.word.five {
+    --delay: calc((var(--char-index) + 1) * 400ms);
+    animation: breathe 4000ms infinite both;
+    animation-delay: var(--delay);
+}
+
+/* Row 3 Contents */
+.row.three {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    background-color: #191919;
+    color: #F1E8B8;
+}
+
+.spread.zero {
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'wght' 4, 'wdth' 0, 'opsz' 8;
+    font-size: 0.6vw;
+    line-height: 1vh;
+}
+
+.spread.one {
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'wght' 10, 'wdth' 0, 'opsz' 8;
+    font-size: 0.7vw;
+    line-height: 2vh;
+}
+
+.spread.two {
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'wght' 20, 'wdth' 8, 'opsz' 16;
+    font-size: 0.8vw;
+    line-height: 3vh;
+}
+
+.spread.three {
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'wght' 30, 'wdth' 16, 'opsz' 24;
+    font-size: 0.9vw;
+    line-height: 4vh;
+}
+
+.spread.four {
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'wght' 40, 'wdth' 24, 'opsz' 32;
+    font-size: 1.0vw;
+    line-height: 5vh;
+}
+
+.spread.five {
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'wght' 50, 'wdth' 32, 'opsz' 40;
+    font-size: 1.1vw;
+    line-height: 6vh;
+}
+
+.spread.six {
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'wght' 80, 'wdth' 40, 'opsz' 48;
+    font-size: 1.2vw;
+    line-height: 7vh;
+}
+
+.spread.seven {
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'wght' 120, 'wdth' 48, 'opsz' 56;
+    font-size: 1.3vw;
+    line-height: 8vh;
+}
+
+.spread.eight {
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'wght' 160, 'wdth' 56, 'opsz' 64;
+    font-size: 1.4vw;
+    line-height: 9vh;
+}
+
+.spread.nine {
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'wght' 180, 'wdth' 64, 'opsz' 72;
+    font-size: 1.3vw;
+    line-height: 10vh;
+}
+
+.spread.ten {
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'wght' 225, 'wdth' 72, 'opsz' 80;
+    font-size: 1.6vw;
+    line-height: 11vh;
+}
+
+.spread.eleven {
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'wght' 275, 'wdth' 80, 'opsz' 88;
+    font-size: 1.7vw;
+    line-height: 12vh;
+}
+
+.spread.twelve {
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'wght' 300, 'wdth' 100, 'opsz' 96;
+    font-size: 1.8vw;
+    line-height: 13vh;
+}
+
+/* Row 4 Contents */
+.row.four {
+    display: inline-grid;
+    grid-template-columns: repeat(15,1fr);
+    grid-template-rows: auto;
+    grid-gap: 0px;
+    background-color: #F9E784;
+    color: #ffa45b;
+    text-align: center;
+    font-size: 4vw;
+}
+
+.slant {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+}
+
+.slant.one {
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'slnt' 1, 'opsz' 144;
+}
+
+.slant.two {
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'slnt' 2;
+}
+
+.slant.three {
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'slnt' 3;
+}
+
+.slant.four {
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'slnt' 4;
+}
+
+.slant.five {
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'slnt' 5;
+}
+
+.slant.six {
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'slnt' 6;
+}
+
+.slant.seven {
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'slnt' 7;
+}
+
+.slant.eight {
+    font-family: 'PathwayExtreme', fallback, sans-serif;
+    font-variation-settings: 'slnt' 8;
+}
+
+/* Row 5 Contents */
+.row.five {
+    font-family: 'PathwayExtreme2', fallback, sans-serif;
+    font-variation-settings: 'wght' var(--font-weight-row5), 'wdth' var(--font-width-row5);
+    background-color: #F1E8B8;
+    color: #191919;
+    font-size: 20em;
+}
+
+/* Found the animation curve stuff here */
+/* https://css-irl.info/variable-font-animation-with-css-and-splitting-js/ */
+@keyframes breathe {
+    0% {
+    font-variation-settings: 'wght' 4, 'wdth' 0, 'opsz' 8;
+    height: 0vw;
+    }
+    60% {
+    font-variation-settings: 'wght' 300, 'wdth' 100, 'opsz' 144;
+    height: 11vw;
+    }
+    
+    100% {
+    font-variation-settings: 'wght' 4, 'wdth' 0, 'opsz' 8;
+    height: 0vw;
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 480px) {
+    .row.one {
+        background-color: #D05353;
+        color: #F1E8B8;
+    }
+    .row.two {
+        background-color: #191919;
+        color: #D05353;
+    }
+    .row.three {
+        background-color: #F1E8B8;
+        color: #191919;
+    }
+    .row.four {
+        background-color: #ffa45b;
+        color: #F9E784;
+    }
+    .row.five {
+        background-color: #D05353;
+        color: #F1E8B8;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .row.five {
+        font-size: 10em;
+    }
+}
+

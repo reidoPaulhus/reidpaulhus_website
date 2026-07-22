@@ -1,3 +1,136 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0573fa556f2447a390e8f4c3bfd62ebbbb7bd5cd019a9d98ca11856ade498d65
-size 2502
+.gg-container {
+  --main-color: #000;
+  --secondary-color: #111;
+  --txt-color: #fff;
+  --img-bg-color: rgba(0, 0, 0, 0.9);
+  --backdrop-color: rgba(0, 0, 0, 0.9);
+  --gap-length: 5px;
+  --row-height: 200px;
+  --column-width: 200px;
+  justify-content: center;
+  align-content: center;
+}
+
+.gg-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--column-width), 1fr));
+  grid-auto-rows: var(--row-height);
+  grid-gap: var(--gap-length);
+}
+
+.gg-box img {
+  object-fit: cover;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background: var(--img-bg-color);
+}
+
+.gg-box img:hover {
+  opacity: 0.50;
+}
+
+#gg-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--backdrop-color);
+  z-index: 9999;
+  text-align: center;
+}
+
+#gg-screen .gg-image {
+  height: 100%;
+  display: cover;
+  justify-content: center;
+  align-items: center;
+}
+
+#gg-screen .gg-image img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+}
+
+.gg-btn {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background: var(--main-color);
+  color: var(--txt-color);
+  text-align: center;
+  cursor: pointer;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  font-size: 20px;
+  line-height: 50px;
+  box-sizing: border-box;
+}
+
+.gg-btn-close {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  box-sizing: border-box;
+}
+
+.gg-btn:hover {
+  background: var(--secondary-color);
+}
+
+.gg-btn-close {
+  top: 0px;
+}
+
+.gg-next {
+  right: 5vw;
+}
+
+.gg-prev {
+  left: 5vw;
+}
+
+.gg-prev,
+.gg-next {
+  bottom: 50%;
+}
+
+@media (min-width: 478px) {
+  .gg-box img:nth-child(2n):not(:last-of-type) {
+    grid-row-end: span 1;
+    grid-column-end: span 1;
+  }
+
+  [data-layout="horizontal"] img:nth-child(2n):not(:last-of-type) {
+    grid-column-end: span 1;
+    grid-row-end: span 1;
+  }
+
+  [data-layout="square"] img:nth-child(2n):not(:last-of-type) {
+    grid-row-end: span 1;
+    grid-column-end: span 1;
+  }
+}
+
+@media (max-width: 1768px) {
+  .gg-box {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: calc(var(--row-height) - 1vh);
+  }
+}
+
+@media (max-width: 1450px) {
+  .gg-box {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: calc(var(--row-height) - 1vh);
+  }
+}

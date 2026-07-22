@@ -1,3 +1,280 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8a2cdae1395c60caef16ca20349e869966d53c52299f65ffe0dc34275755e977
-size 5319
+/* Put your custom styles here */
+
+.videowrapper {
+    position: relative;
+    align-content: center;
+    width: 100%;
+    height: auto;
+}
+
+video {
+    /* override other styles to make responsive */
+    width: 100%    !important;
+    height: auto   !important;
+}
+
+ /* Style buttons */
+ .btn {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: white;
+    font-size: 25px;
+    top: -18px;
+    cursor: pointer;
+    border: none;
+    outline:none;
+}
+
+/* removes any focus outline to buttons */
+*:focus {
+    outline: 0 !important;
+}
+  
+/* Darker background on mouse-over */
+.btn:hover {
+    color: grey;
+    background-color: transparent;
+} 
+
+.bg-site-base1 {
+    background-color: #313131;
+}
+
+.bg-site-base2 {
+    background-color: #414141;
+}
+
+.bg-site-content {
+    background-color: #525252;
+}
+
+.bg-site-highlight {
+    background-color: #ca3e47;
+}
+
+.bg-site-offwhite {
+    background-color: #f3eaeb;
+}
+
+.txt-site-base1 {
+    color: #f3eaeb;
+}
+
+.txt-site-base2{
+    color: #c4c4c4;
+}
+
+.txt-site-color{
+    color: #ca3e47;
+}
+
+#photos {
+    /* Prevent vertical gaps */
+    line-height: 0;
+     
+    -webkit-column-count: 5;
+    -webkit-column-gap:   0px;
+    -moz-column-count:    5;
+    -moz-column-gap:      0px;
+    column-count:         5;
+    column-gap:           0px;  
+  }
+  
+#photos img {
+    /* Just in case there are inline attributes */
+    width: 100% !important;
+    height: auto !important;
+}
+
+@media (max-width: 1200px) {
+    #photos {
+    -moz-column-count:    4;
+    -webkit-column-count: 4;
+    column-count:         4;
+    }
+}
+@media (max-width: 1000px) {
+    #photos {
+    -moz-column-count:    3;
+    -webkit-column-count: 3;
+    column-count:         3;
+    }
+}
+@media (max-width: 800px) {
+    #photos {
+    -moz-column-count:    2;
+    -webkit-column-count: 2;
+    column-count:         2;
+    }
+}
+@media (max-width: 400px) {
+    #photos {
+    -moz-column-count:    1;
+    -webkit-column-count: 1;
+    column-count:         1;
+    }
+}
+
+.content-1-2 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.49);
+}
+
+section#content-1-2.content-block.content-1-2:hover {
+    background-color: rgba(0, 0, 0, 0.06);
+    transition: all .7s , transform 2s;
+}
+
+.project-head {
+    font-size: 3em;
+    font-weight: 500;
+}
+
+.project-subhead {
+    font-size: 2em;
+}
+
+.project-reidimg {
+    display: inline-block;
+    text-align: center;
+}
+
+.col-lg-offset-1 {
+    text-align: center;
+}
+
+.projects-thumb {
+    overflow: hidden;
+    object-fit: cover;
+}
+
+/* --------------- */
+/* **** Layla **** */
+/* --------------- */
+figure.effect-layla {
+    background: #000000;
+}
+
+figure.effect-layla img {
+    height: 390px;
+}
+
+figure.effect-layla figcaption {
+    padding: 3em;
+}
+
+figure.effect-layla figcaption::before,
+figure.effect-layla figcaption::after {
+    position: absolute;
+    content: '';
+    opacity: 0;
+}
+
+figure.effect-layla figcaption::before {
+    top: 50px;
+    right: 30px;
+    bottom: 50px;
+    left: 30px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: scale(0,1);
+    transform: scale(0,1);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+figure.effect-layla figcaption::after {
+    top: 30px;
+    right: 50px;
+    bottom: 30px;
+    left: 50px;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    -webkit-transform: scale(1,0);
+    transform: scale(1,0);
+    -webkit-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+}
+
+figure.effect-layla h2 {
+    padding-top: 26%;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+}
+
+figure.effect-layla p {
+    padding: 0.5em 2em;
+    text-transform: none;
+    opacity: 0;
+    -webkit-transform: translate3d(0,-10px,0);
+    transform: translate3d(0,-10px,0);
+}
+
+figure.effect-layla img,
+figure.effect-layla h2 {
+    -webkit-transform: translate3d(0,-30px,0);
+    transform: translate3d(0,-30px,0);
+}
+
+figure.effect-layla img,
+figure.effect-layla figcaption::before,
+figure.effect-layla figcaption::after,
+figure.effect-layla p {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 1s, transform 0.35s;
+    color: #ffffff;
+    letter-spacing: 0;
+    text-align: center;
+    font-weight: 500;
+    font-size: .85em;
+}
+
+figure.effect-layla:hover img {
+    opacity: 0.7;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+figure.effect-layla:hover figcaption::before,
+figure.effect-layla:hover figcaption::after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+figure.effect-layla:hover h2,
+figure.effect-layla:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+figure.effect-layla:hover figcaption::after,
+figure.effect-layla:hover h2,
+figure.effect-layla:hover p,
+figure.effect-layla:hover img {
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+}
+
+.latest-project-thumb {
+    max-width: 360px;
+    max-height: 410px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.latest-projects-h3 {
+    text-shadow: 0 2px 2px #000000;
+    font-weight: 400;
+}
+
+.latest-projects-p {
+    font-weight: 400;
+    text-shadow: 0px 2px 4px #000000;
+}
+
+section.content-block.gallery-2 > div > div#slider.xb-slide {
+    top: -40px;
+}

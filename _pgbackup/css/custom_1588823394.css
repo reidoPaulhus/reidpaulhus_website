@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e0dcec5ad28d7b387c8f827adafc22a7d4abecc22d923bace20beed13f3aa205
-size 112
+/* Put your custom styles here */
+.bg-grey {
+    background-color: #2a2a2a;
+}
+
+.txt-grey {
+    color: #2a2a2a;
+}
