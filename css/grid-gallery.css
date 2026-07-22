@@ -1,4 +1,6 @@
 .gg-container {
+  display: flex;
+  flex-direction: column;
   --main-color: #000;
   --secondary-color: #111;
   --txt-color: #fff;
@@ -16,6 +18,8 @@
   grid-template-columns: repeat(auto-fit, minmax(var(--column-width), 1fr));
   grid-auto-rows: var(--row-height);
   grid-gap: var(--gap-length);
+  min-width: 0;
+  min-height: 0;
 }
 
 .gg-box img {
@@ -24,6 +28,8 @@
   width: 100%;
   height: 100%;
   background: var(--img-bg-color);
+  min-width: 0;
+  min-height: 0;
 }
 
 .gg-box img:hover {
@@ -43,7 +49,7 @@
 
 #gg-screen .gg-image {
   height: 100%;
-  display: cover;
+  display: flex; /* Fixed from invalid 'display: cover' */
   justify-content: center;
   align-items: center;
 }
