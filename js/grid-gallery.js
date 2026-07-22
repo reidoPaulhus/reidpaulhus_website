@@ -11,7 +11,7 @@ for(var i = 0; i < l; i++) {
     container.prepend(screenItem);
     if (parentItem.hasAttribute('data-theme')) screenItem.setAttribute("data-theme", "dark");
     var route = currentImg.src;
-    root.style.overflow = 'hidden';
+    /*root.style.overflow = 'hidden';*/
     screenItem.innerHTML = '<div class="gg-image"></div><div class="gg-close gg-btn-close"><div class="gg-prev gg-btn">&larr;</div><div class="gg-next gg-btn">&rarr;</div></div>';
     const first = images[0].src, last = images[l-1].src;
     const imgItem = document.querySelector(".gg-image"), prevBtn = document.querySelector(".gg-prev"), nextBtn = document.querySelector(".gg-next"), close = document.querySelector(".gg-close");
