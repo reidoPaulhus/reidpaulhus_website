@@ -1,20 +1,17 @@
 .gg-container {
-  display: block;
   width: 100%;
 }
 
 .gg-box {
-  display: grid;
-  /* Clamping minmax ensures Firefox can resolve track width within floats */
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 130px), 1fr));
-  grid-auto-rows: 150px;
+  display: flex;
+  flex-wrap: wrap;
   gap: 6px;
   width: 100%;
 }
 
 .gg-box img {
-  display: block;
-  width: 100%;
+  /* Automatically fill space, minimum basis of 130px */
+  flex: 1 1 130px;
   height: 150px;
   object-fit: cover;
   cursor: pointer;
@@ -22,7 +19,7 @@
 }
 
 .gg-box img:hover {
-  opacity: 0.50;
+  opacity: 0.5;
 }
 
 /* True Full-Screen Viewport Lightbox Layer */
