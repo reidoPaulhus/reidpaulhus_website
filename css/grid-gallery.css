@@ -22,6 +22,7 @@
 }
 
 .gg-box img {
+  display: block;
   object-fit: cover;
   cursor: pointer;
   width: 100%;
