@@ -24,6 +24,7 @@
     <link href="css/blocks.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/slider_slide-styles.css" rel="stylesheet">
+    <link href="css/grid-gallery.css" rel="stylesheet">
 
 
 </head>
@@ -76,7 +77,7 @@
     <div class="videowrapper">
         <video class="video-fluid z-depth-1" playsinline loop controls autoplay
             muted>
-            <source src="videos/myNameIsVincentPogo_vid3.mp4" type="video/mp4" />
+            <source src="videos/myNameIsVincentPogo_vid1.mp4" type="video/mp4" />
         </video>
     </div>
 
@@ -85,22 +86,59 @@
     <section class="content-1-5 content-block">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-md-6 col-sm-12">
-                    <!-- <img class="img-responsive project-reidimg"
-                        src="images/reid-paulhus-cropped.png"
-                        data-pg-ia='{"l":[{"trg":"now","t":"this","a":"fadeIn","d":"1.5s"}]}'> -->
+                <!-- LEFT SIDE -->
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <div class="gg-container">
+                        <div class="gg-box">
+                            <div class="img-wrapper"><img src="images/projects/my-name-is-vincent-pogo/pogo1.png"></div>
+                            <div class="img-wrapper"><img src="images/projects/my-name-is-vincent-pogo/pogo2.png"></div>
+                            <div class="img-wrapper"><img src="images/projects/my-name-is-vincent-pogo/pogo3.png"></div>
+                            <div class="img-wrapper"><img src="images/projects/my-name-is-vincent-pogo/pogo4.png"></div>
+                            <div class="img-wrapper"><img src="images/projects/my-name-is-vincent-pogo/pogo5.png"></div>
+                            <div class="img-wrapper"><img src="images/projects/my-name-is-vincent-pogo/pogo6.png"></div>
+                            <div class="img-wrapper"><img src="images/projects/my-name-is-vincent-pogo/pogo7.png"></div>
+                            <div class="img-wrapper"><img src="images/projects/my-name-is-vincent-pogo/pogo8.png"></div>
+                        </div>
+                    </div>
                 </div>
+                <!-- RIGHT SIDE -->
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <h2 class="project-head txt-site-base1">My Name is Vincent Pogo
                     </h2>
                     <br></br>
-                    <h3 class="project-subhead txt-site-base1">IN DEVELOPMENT</h3>
+                    <h3 class="project-subhead txt-site-base1">CURRENTLY IN DEVELOPMENT</h3>
                     <br></br>
-                    <h3 class="project-subhead txt-site-base1">A physics-based platformer. Played solo, or couch co-op.</h3>
-                    <p class="project-text txt-site-base1">Play as Vincent Pogo, a timid duck who takes on the task of bringing the king grave news about the kingdom. Control Vincent as he uses his trusty pogo stick to vault his way through unknown lands towards the kingdom in a grand adventure.</p>
+                    <h3 class="project-subhead txt-site-base1">A physics-driven platformer where every jump counts.</h3>
+                    <p class="project-text txt-site-base1">Play as Vincent Pogo, a world-famous performer who decides to break free. Control Vincent as he uses his trusty pogo stick to balance and vault his way through unknown lands towards the kingdom in a grand adventure.</p>
+
+                    <p class="txt-site-base1"><strong>Role:</strong> Lead Programmer & Technical Designer (3-Person Team)</p>
+                    <ul class="project-list txt-site-base1">
+                        <li class="txt-site-base1"><strong>Core Engineering:</strong> Architected and implemented all gameplay mechanics, physics systems, and dialogue logic as the sole programmer.</li>
+                        <li class="txt-site-base1"><strong>Level & Narrative Design:</strong> Created level blockouts, iterated on game feel, and integrated story-driven events to ensure cohesive pacing.</li>
+                        <li class="txt-site-base1"><strong>Tech Art & Polish:</strong> Developed particle systems and visual effects to heighten gameplay feedback and polish the overall aesthetic.</li>
+                        <li class="txt-site-base1"><strong>Production & Marketing:</strong> Actively contributed to iterative design discussions, playtest feedback loops, and promotional materials.</li>
+                    </ul>
+
+                    <div
+                            style="display: flex; justify-content: center; align-items: center;">
+                        <button class="btn"
+                                onclick="location.href='https://www.reddit.com/user/DoerAndTheThinker/'"><i
+                                class="fa fa-reddit"></i></button>
+                        <button class="btn"
+                                onclick="location.href='https://www.youtube.com/channel/UCR-SdqkqaEs8HaLdu7xhT3g'"><i
+                                class="fa fa-youtube-play"></i></button>
+                    </div>
+
                 </div>
             </div>
+            <!-- /.row -->
         </div>
+        <!-- /.container -->
+    </section>
+
+    <section>
+        <a href="https://store.steampowered.com/app/3827520/My_Name_Is_Vincent_Pogo/"
+            class="btn btn-block btn-primary">Wishlist On Steam</a>
     </section>
 
     <!-- FOOTER -->
@@ -131,9 +169,9 @@
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/plugins.js"></script>
-
     <script type="text/javascript" src="js/bskit-scripts.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/grid-gallery.js"></script>
 </body>
 
 </html>
